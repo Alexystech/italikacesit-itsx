@@ -15,6 +15,7 @@ public class MainClass {
 
         List administratorList = entityManager.createQuery("FROM Administrator").getResultList();
 
+
         System.out.println("hay " + administratorList.size() + " administradores");
 
     }

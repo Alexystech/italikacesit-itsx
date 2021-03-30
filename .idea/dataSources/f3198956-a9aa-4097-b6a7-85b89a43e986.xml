@@ -784,12 +784,12 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <StartupTime>1617034099</StartupTime>
+      <StartupTime>1617118377</StartupTime>
     </root>
     <database id="2" parent="1" name="italikadb">
       <ObjectId>16395</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>516</IntrospectionStateNumber>
+      <IntrospectionStateNumber>524</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16439|16441|1
 sequence|table|16449|16451|1
@@ -874,7 +874,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>517</IntrospectionStateNumber>
+      <IntrospectionStateNumber>525</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="19" parent="2" name="plpgsql">
@@ -1006,24 +1006,29 @@ UC/10
     <table id="36" parent="18" name="client">
       <ObjectId>16399</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>515</StateNumber>
+      <StateNumber>519</StateNumber>
     </table>
     <table id="37" parent="18" name="mechanic">
       <ObjectId>16451</ObjectId>
       <Owner>slasher</Owner>
-      <StateNumber>507</StateNumber>
+      <StateNumber>520</StateNumber>
     </table>
     <table id="38" parent="18" name="service">
       <ObjectId>16459</ObjectId>
       <Owner>slasher</Owner>
-      <StateNumber>508</StateNumber>
+      <StateNumber>519</StateNumber>
     </table>
     <table id="39" parent="18" name="type_of_service">
       <ObjectId>16470</ObjectId>
       <Owner>slasher</Owner>
-      <StateNumber>509</StateNumber>
+      <StateNumber>521</StateNumber>
     </table>
-    <column id="40" parent="35" name="folio">
+    <table id="40" parent="18" name="vehicle">
+      <ObjectId>16476</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>522</StateNumber>
+    </table>
+    <column id="41" parent="35" name="folio">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1031,55 +1036,55 @@ UC/10
       <DefaultExpression>nextval(&apos;administrator_folio_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="41" parent="35" name="cellphone">
+    <column id="42" parent="35" name="cellphone">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="35" name="email">
+    <column id="43" parent="35" name="email">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="35" name="last_name">
+    <column id="44" parent="35" name="last_name">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="35" name="mother_last_name">
+    <column id="45" parent="35" name="mother_last_name">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="35" name="name">
+    <column id="46" parent="35" name="name">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="35" name="password">
+    <column id="47" parent="35" name="password">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="47" parent="35" name="user_name">
+    <column id="48" parent="35" name="user_name">
       <Position>8</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="48" parent="35" name="administrator_pkey">
+    <index id="49" parent="35" name="administrator_pkey">
       <ObjectId>16445</ObjectId>
       <StateNumber>505</StateNumber>
       <ColNames>folio</ColNames>
@@ -1089,49 +1094,49 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="49" parent="35" name="administrator_pkey">
+    <key id="50" parent="35" name="administrator_pkey">
       <ObjectId>16446</ObjectId>
       <StateNumber>505</StateNumber>
       <ColNames>folio</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>administrator_pkey</UnderlyingIndexName>
     </key>
-    <column id="50" parent="36" name="folio">
+    <column id="51" parent="36" name="folio">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>492</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="36" name="name">
+    <column id="52" parent="36" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>492</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="36" name="last_name">
+    <column id="53" parent="36" name="last_name">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>492</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="36" name="cellphone">
+    <column id="54" parent="36" name="cellphone">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>514</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="36" name="mother_last_name">
+    <column id="55" parent="36" name="mother_last_name">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>515</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="55" parent="36" name="client_pkey">
+    <index id="56" parent="36" name="client_pkey">
       <ObjectId>16402</ObjectId>
       <StateNumber>492</StateNumber>
       <ColNames>folio</ColNames>
@@ -1141,14 +1146,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="56" parent="36" name="client_pkey">
+    <key id="57" parent="36" name="client_pkey">
       <ObjectId>16403</ObjectId>
       <StateNumber>492</StateNumber>
       <ColNames>folio</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>client_pkey</UnderlyingIndexName>
     </key>
-    <column id="57" parent="37" name="folio">
+    <column id="58" parent="37" name="folio">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1156,42 +1161,42 @@ UC/10
       <DefaultExpression>nextval(&apos;mechanic_folio_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="58" parent="37" name="cellphone">
+    <column id="59" parent="37" name="cellphone">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>507</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="37" name="last_name">
+    <column id="60" parent="37" name="last_name">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>507</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="60" parent="37" name="mother_last_name">
+    <column id="61" parent="37" name="mother_last_name">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>507</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="37" name="name">
+    <column id="62" parent="37" name="name">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>507</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="37" name="speciality">
+    <column id="63" parent="37" name="speciality">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>507</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="63" parent="37" name="mechanic_pkey">
+    <index id="64" parent="37" name="mechanic_pkey">
       <ObjectId>16455</ObjectId>
       <StateNumber>507</StateNumber>
       <ColNames>folio</ColNames>
@@ -1201,14 +1206,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="64" parent="37" name="mechanic_pkey">
+    <key id="65" parent="37" name="mechanic_pkey">
       <ObjectId>16456</ObjectId>
       <StateNumber>507</StateNumber>
       <ColNames>folio</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>mechanic_pkey</UnderlyingIndexName>
     </key>
-    <column id="65" parent="38" name="folio">
+    <column id="66" parent="38" name="folio">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1216,63 +1221,63 @@ UC/10
       <DefaultExpression>nextval(&apos;service_folio_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="66" parent="38" name="cost">
+    <column id="67" parent="38" name="cost">
       <Position>2</Position>
       <DataType>real|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="67" parent="38" name="fecha_entrega">
+    <column id="68" parent="38" name="fecha_entrega">
       <Position>3</Position>
       <DataType>timestamp(6)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="68" parent="38" name="fecha_recibido">
+    <column id="69" parent="38" name="fecha_recibido">
       <Position>4</Position>
       <DataType>timestamp(6)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="69" parent="38" name="issues">
+    <column id="70" parent="38" name="issues">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="70" parent="38" name="fk_client">
+    <column id="71" parent="38" name="fk_client">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="71" parent="38" name="fk_mechanic">
+    <column id="72" parent="38" name="fk_mechanic">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="72" parent="38" name="fk_type_of_service">
+    <column id="73" parent="38" name="fk_type_of_service">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="73" parent="38" name="fk_vehicle">
+    <column id="74" parent="38" name="fk_vehicle">
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>508</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="74" parent="38" name="service_pkey">
+    <index id="75" parent="38" name="service_pkey">
       <ObjectId>16466</ObjectId>
       <StateNumber>508</StateNumber>
       <ColNames>folio</ColNames>
@@ -1282,14 +1287,54 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="75" parent="38" name="service_pkey">
+    <key id="76" parent="38" name="service_pkey">
       <ObjectId>16467</ObjectId>
       <StateNumber>508</StateNumber>
       <ColNames>folio</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>service_pkey</UnderlyingIndexName>
     </key>
-    <column id="76" parent="39" name="folio">
+    <foreign-key id="77" parent="38" name="fkhk7cfdb1k25y9kg9yyl939c1m">
+      <ObjectId>16481</ObjectId>
+      <StateNumber>519</StateNumber>
+      <ColNames>fk_client</ColNames>
+      <RefTableId>16399</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>client</RefTableName>
+      <RefKeyName>client_pkey</RefKeyName>
+      <RefColNames>folio</RefColNames>
+    </foreign-key>
+    <foreign-key id="78" parent="38" name="fkngehtrvsmm23ddritbjtspbtr">
+      <ObjectId>16486</ObjectId>
+      <StateNumber>520</StateNumber>
+      <ColNames>fk_mechanic</ColNames>
+      <RefTableId>16451</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>mechanic</RefTableName>
+      <RefKeyName>mechanic_pkey</RefKeyName>
+      <RefColNames>folio</RefColNames>
+    </foreign-key>
+    <foreign-key id="79" parent="38" name="fkdwe6s98mht4s71a7yqhsluuwi">
+      <ObjectId>16491</ObjectId>
+      <StateNumber>521</StateNumber>
+      <ColNames>fk_type_of_service</ColNames>
+      <RefTableId>16470</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>type_of_service</RefTableName>
+      <RefKeyName>type_of_service_pkey</RefKeyName>
+      <RefColNames>folio</RefColNames>
+    </foreign-key>
+    <foreign-key id="80" parent="38" name="fk8151nlcv2a22lufx4bbnp2y5f">
+      <ObjectId>16496</ObjectId>
+      <StateNumber>522</StateNumber>
+      <ColNames>fk_vehicle</ColNames>
+      <RefTableId>16476</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>vehicle</RefTableName>
+      <RefKeyName>vehicle_pkey</RefKeyName>
+      <RefColNames>plaque</RefColNames>
+    </foreign-key>
+    <column id="81" parent="39" name="folio">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1297,14 +1342,14 @@ UC/10
       <DefaultExpression>nextval(&apos;type_of_service_folio_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="77" parent="39" name="name_of_service">
+    <column id="82" parent="39" name="name_of_service">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>509</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="78" parent="39" name="type_of_service_pkey">
+    <index id="83" parent="39" name="type_of_service_pkey">
       <ObjectId>16474</ObjectId>
       <StateNumber>509</StateNumber>
       <ColNames>folio</ColNames>
@@ -1314,12 +1359,58 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="79" parent="39" name="type_of_service_pkey">
+    <key id="84" parent="39" name="type_of_service_pkey">
       <ObjectId>16475</ObjectId>
       <StateNumber>509</StateNumber>
       <ColNames>folio</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>type_of_service_pkey</UnderlyingIndexName>
+    </key>
+    <column id="85" parent="40" name="plaque">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>518</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="86" parent="40" name="brand">
+      <Position>2</Position>
+      <DataType>varchar(7)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>518</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="87" parent="40" name="model">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>518</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="88" parent="40" name="year">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>518</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="89" parent="40" name="vehicle_pkey">
+      <ObjectId>16479</ObjectId>
+      <StateNumber>518</StateNumber>
+      <ColNames>plaque</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <ClassIds>3126</ClassIds>
+    </index>
+    <key id="90" parent="40" name="vehicle_pkey">
+      <ObjectId>16480</ObjectId>
+      <StateNumber>518</StateNumber>
+      <ColNames>plaque</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>vehicle_pkey</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
