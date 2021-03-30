@@ -19,25 +19,25 @@ public class Administrator implements Serializable {
     @Column(name = "folio")
     private Integer folio;
 
-    @Column(name = "name")
+    @Column(name = "name", length = 20)
     private String name;
 
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name", length = 20, nullable = false)
     private String lastName;
 
-    @Column(name = "mother_last_name", nullable = false)
+    @Column(name = "mother_last_name", length = 20, nullable = false)
     private String motherLastName;
 
-    @Column(name = "user_name", nullable = false)
+    @Column(name = "user_name", length = 20, nullable = false)
     private String userName;
 
-    @Column(name = "EMail", nullable = false)
+    @Column(name = "EMail", length = 40, nullable = false)
     private String eMail;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password", length = 50, nullable = false)
     private String password;
 
-    @Column(name = "cellphone", nullable = false)
+    @Column(name = "cellphone", length = 10, nullable = false)
     private String cellphone;
 
     public Administrator(Integer folio, String name, String lastName, String motherLastName, String userName, String eMail, String password, String cellphone) {
