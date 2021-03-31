@@ -19,7 +19,7 @@ public class Administrator implements Serializable {
     @Column(name = "folio")
     private Integer folio;
 
-    @Column(name = "name", length = 20)
+    @Column(name = "name", length = 20, nullable = false)
     private String name;
 
     @Column(name = "last_name", length = 20, nullable = false)

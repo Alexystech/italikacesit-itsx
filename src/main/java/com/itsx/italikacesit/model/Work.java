@@ -13,8 +13,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "service")
-public class Service implements Serializable {
+@Table(name = "work")
+public class Work implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,8 +24,8 @@ public class Service implements Serializable {
     private Integer folio;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "fk_type_of_service", referencedColumnName = "folio", nullable = false)
-    private TypeOfService typeOfService;
+    @JoinColumn(name = "fk_type_of_work", referencedColumnName = "folio", nullable = false)
+    private TypeOfWork typeOfWork;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_mechanic", referencedColumnName = "folio", nullable = false)
@@ -51,9 +51,9 @@ public class Service implements Serializable {
     @Column(name = "issues", nullable = false)
     private String issues;
 
-    public Service(Integer folio, TypeOfService typeOfService, Mechanic mechanic, Vehicle vehicle, Float cost, Date fechaRecibido, Date fechaEntrega, Client client, String issues) {
+    public Work(Integer folio, TypeOfWork typeOfWork, Mechanic mechanic, Vehicle vehicle, Float cost, Date fechaRecibido, Date fechaEntrega, Client client, String issues) {
         this.folio = folio;
-        this.typeOfService = typeOfService;
+        this.typeOfWork = typeOfWork;
         this.mechanic = mechanic;
         this.vehicle = vehicle;
         this.cost = cost;
@@ -63,7 +63,7 @@ public class Service implements Serializable {
         this.issues = issues;
     }
 
-    public Service() {}
+    public Work() {}
 
     public Integer getFolio() {
         return folio;
@@ -73,12 +73,12 @@ public class Service implements Serializable {
         this.folio = folio;
     }
 
-    public TypeOfService getTypeOfService() {
-        return typeOfService;
+    public TypeOfWork getTypeOfService() {
+        return typeOfWork;
     }
 
-    public void setTypeOfService(TypeOfService typeOfService) {
-        this.typeOfService = typeOfService;
+    public void setTypeOfService(TypeOfWork typeOfWork) {
+        this.typeOfWork = typeOfWork;
     }
 
     public Mechanic getMechanic() {

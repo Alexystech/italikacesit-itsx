@@ -10,8 +10,8 @@
         <class>com.itsx.italikacesit.model.Client</class>
         <class>com.itsx.italikacesit.model.Mechanic</class>
         <class>com.itsx.italikacesit.model.Vehicle</class>
-        <class>com.itsx.italikacesit.model.Service</class>
-        <class>com.itsx.italikacesit.model.TypeOfService</class>
+        <class>com.itsx.italikacesit.model.Work</class>
+        <class>com.itsx.italikacesit.model.TypeOfWork</class>
 
         <properties>
 
