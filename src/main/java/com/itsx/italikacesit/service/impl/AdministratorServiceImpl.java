@@ -9,18 +9,18 @@ import javax.persistence.Persistence;
 import java.util.List;
 import java.util.Optional;
 
-public class AdministratoriServiceImpl implements AdministratorService {
+public class AdministratorServiceImpl implements AdministratorService {
 
     private EntityManager entityManager;
     private EntityManagerFactory entityManagerFactory;
 
-    public AdministratoriServiceImpl() {
+    public AdministratorServiceImpl() {
         entityManagerFactory = Persistence.createEntityManagerFactory("aplicacion");
     }
 
     @Override
     public boolean createAdministrator(Administrator administrator) {
-        if (administrator != null) {
+        if ( administrator != null ) {
             entityManager = entityManagerFactory.createEntityManager();
             entityManager.getTransaction().begin();
 
@@ -90,11 +90,13 @@ public class AdministratoriServiceImpl implements AdministratorService {
     public boolean isDifferentFolio(int folio) {
         entityManager = entityManagerFactory.createEntityManager();
         Optional<List<Administrator>> administratorList = Optional
-                .ofNullable(entityManager.createQuery("FROM Administrator").getResultList());
+                .ofNullable(entityManager
+                        .createQuery("FROM Administrator")
+                        .getResultList()
+                );
 
-        if (!administratorList.get().stream()
+        if ( !administratorList.get().stream()
                 .anyMatch(x -> x.getFolio().intValue() == folio)) {
-            System.out.println("lo dejo pasar");
             return false;
         }
 
