@@ -36,7 +36,7 @@ public class Work implements Serializable {
     private Vehicle vehicle;
 
     @Column(name = "cost", nullable = false)
-    private Float cost;
+    private Double cost;
 
     @Column(name = "fecha_recibido", nullable = false)
     private Date fechaRecibido;
@@ -51,11 +51,7 @@ public class Work implements Serializable {
     @Column(name = "issues", nullable = false)
     private String issues;
 
-    public Work(Integer folio, TypeOfWork typeOfWork
-            , Mechanic mechanic, Vehicle vehicle
-            , Float cost, Date fechaRecibido
-            , Date fechaEntrega, Client client
-            , String issues) {
+    public Work(Integer folio, TypeOfWork typeOfWork, Mechanic mechanic, Vehicle vehicle, Double cost, Date fechaRecibido, Date fechaEntrega, Client client, String issues) {
         this.folio = folio;
         this.typeOfWork = typeOfWork;
         this.mechanic = mechanic;
@@ -67,7 +63,9 @@ public class Work implements Serializable {
         this.issues = issues;
     }
 
-    public Work() {}
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
     public Integer getFolio() {
         return folio;
@@ -77,11 +75,11 @@ public class Work implements Serializable {
         this.folio = folio;
     }
 
-    public TypeOfWork getTypeOfService() {
+    public TypeOfWork getTypeOfWork() {
         return typeOfWork;
     }
 
-    public void setTypeOfService(TypeOfWork typeOfWork) {
+    public void setTypeOfWork(TypeOfWork typeOfWork) {
         this.typeOfWork = typeOfWork;
     }
 
@@ -101,11 +99,11 @@ public class Work implements Serializable {
         this.vehicle = vehicle;
     }
 
-    public Float getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(Float cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
