@@ -51,7 +51,11 @@ public class Work implements Serializable {
     @Column(name = "issues", nullable = false)
     private String issues;
 
-    public Work(Integer folio, TypeOfWork typeOfWork, Mechanic mechanic, Vehicle vehicle, Float cost, Date fechaRecibido, Date fechaEntrega, Client client, String issues) {
+    public Work(Integer folio, TypeOfWork typeOfWork
+            , Mechanic mechanic, Vehicle vehicle
+            , Float cost, Date fechaRecibido
+            , Date fechaEntrega, Client client
+            , String issues) {
         this.folio = folio;
         this.typeOfWork = typeOfWork;
         this.mechanic = mechanic;

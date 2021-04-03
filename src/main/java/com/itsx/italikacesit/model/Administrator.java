@@ -40,7 +40,10 @@ public class Administrator implements Serializable {
     @Column(name = "cellphone", length = 10, nullable = false)
     private String cellphone;
 
-    public Administrator(Integer folio, String name, String lastName, String motherLastName, String userName, String eMail, String password, String cellphone) {
+    public Administrator(Integer folio, String name
+            , String lastName, String motherLastName
+            , String userName, String eMail
+            , String password, String cellphone) {
         this.folio = folio;
         this.name = name;
         this.lastName = lastName;

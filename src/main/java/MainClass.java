@@ -1,39 +1,16 @@
-import com.itsx.italikacesit.model.Client;
-import com.itsx.italikacesit.service.impl.ClientServiceImpl;
+import com.itsx.italikacesit.model.Vehicle;
+import com.itsx.italikacesit.service.VehicleService;
+import com.itsx.italikacesit.service.WorkService;
+import com.itsx.italikacesit.service.impl.VehicleServiceImpl;
+import com.itsx.italikacesit.service.impl.WorkServiceImpl;
 
 public class MainClass {
 
     public static void main(String[] args) {
-        ClientServiceImpl clientService = new ClientServiceImpl();
 
-        clientService.createClient(new Client(1,"Alexis"
-                ,"Vazquez"
-                ,"Morales"
-                ,"2851156452")
-        );
+        WorkService workService = new WorkServiceImpl();
 
-        clientService.createClient(new Client(2,"Alexis"
-                ,"Vazquez"
-                ,"Morales"
-                ,"2851156452")
-        );
 
-        clientService.getAllClients().stream().forEach(x -> System.out.println(x.getName()));
 
-//        clientService.removeClientByFolio(1);
-
-        clientService.updateClientByFolio(new Client(2,"Jose"
-                ,"Vazquez"
-                ,"Morales"
-                ,"2851164521")
-        );
-
-        clientService.createClient(new Client(1,"Alexis"
-                ,"Vazquez"
-                ,"Morales"
-                ,"2851156452")
-        );
-
-        clientService.getAllClients().stream().forEach(x -> System.out.println(x.getName()));
     }
 }

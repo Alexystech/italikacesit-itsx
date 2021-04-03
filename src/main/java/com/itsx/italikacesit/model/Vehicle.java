@@ -13,10 +13,10 @@ public class Vehicle implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "plaque")
+    @Column(name = "plaque", length = 7)
     private String plaque;
 
-    @Column(name = "brand", length = 7, nullable = false)
+    @Column(name = "brand", length = 20, nullable = false)
     private String brand;
 
     @Column(name = "model", length = 20, nullable = false)
@@ -25,7 +25,8 @@ public class Vehicle implements Serializable {
     @Column(name = "year", nullable = false)
     private Integer year;
 
-    public Vehicle(String plaque, String brand, String model, Integer year) {
+    public Vehicle(String plaque, String brand
+            , String model, Integer year) {
         this.plaque = plaque;
         this.brand = brand;
         this.model = model;

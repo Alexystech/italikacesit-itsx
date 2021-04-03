@@ -15,7 +15,8 @@ public class AdministratorServiceImpl implements AdministratorService {
     private EntityManagerFactory entityManagerFactory;
 
     public AdministratorServiceImpl() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("aplicacion");
+        entityManagerFactory = Persistence
+                .createEntityManagerFactory("aplicacion");
     }
 
     @Override
@@ -72,7 +73,8 @@ public class AdministratorServiceImpl implements AdministratorService {
     @Override
     public Administrator getAdministratorByFolio(int folio) {
         entityManager = entityManagerFactory.createEntityManager();
-        Optional<Administrator> administrator = Optional.ofNullable(entityManager.find(Administrator.class,folio));
+        Optional<Administrator> administrator = Optional
+                .ofNullable(entityManager.find(Administrator.class,folio));
         entityManager.close();
         return administrator.get();
     }

@@ -34,7 +34,9 @@ public class Mechanic implements Serializable {
     @Column(name = "cellphone", length = 10, nullable = false)
     private String cellphone;
 
-    public Mechanic(Integer folio, String name, String lastName, String motherLastName, String speciality, String cellphone) {
+    public Mechanic(Integer folio, String name
+            , String lastName, String motherLastName
+            , String speciality, String cellphone) {
         this.folio = folio;
         this.name = name;
         this.lastName = lastName;

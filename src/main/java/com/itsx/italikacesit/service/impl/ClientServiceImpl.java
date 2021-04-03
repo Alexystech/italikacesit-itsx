@@ -15,7 +15,8 @@ public class ClientServiceImpl implements ClientService {
     private EntityManagerFactory entityManagerFactory;
 
     public ClientServiceImpl() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("aplicacion");
+        entityManagerFactory = Persistence
+                .createEntityManagerFactory("aplicacion");
     }
 
     @Override
@@ -64,6 +65,7 @@ public class ClientServiceImpl implements ClientService {
 
             entityManager.getTransaction().commit();
             entityManager.close();
+            return true;
         }
         return false;
     }
@@ -71,7 +73,8 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public Client getClientByFolio(int folio) {
         entityManager = entityManagerFactory.createEntityManager();
-        Optional<Client> client = Optional.ofNullable(entityManager.find(Client.class, folio));
+        Optional<Client> client = Optional
+                .ofNullable(entityManager.find(Client.class, folio));
         entityManager.close();
         return client.get();
     }
@@ -80,8 +83,9 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> getAllClients() {
         entityManager = entityManagerFactory.createEntityManager();
         Optional<List<Client>> clientList = Optional
-                .ofNullable(entityManager.createQuery("FROM Client").getResultList());
-
+                .ofNullable(entityManager
+                        .createQuery("FROM Client")
+                        .getResultList());
         entityManager.close();
         return clientList.get();
     }

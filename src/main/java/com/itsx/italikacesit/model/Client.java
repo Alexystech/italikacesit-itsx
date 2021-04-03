@@ -31,7 +31,9 @@ public class Client implements Serializable {
     @Column(name = "cellphone", length = 10, nullable = false)
     private String cellphone;
 
-    public Client(Integer folio, String name, String lastName, String motherLastName, String cellphone) {
+    public Client(Integer folio, String name
+            , String lastName, String motherLastName
+            , String cellphone) {
         this.folio = folio;
         this.name = name;
         this.lastName = lastName;
