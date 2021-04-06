@@ -8,6 +8,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
+/**
+ * Esta clase se encarga de mapear la tabla {@code client} de la
+ * base de datos {@code italikadb}. La estructura de esta clase es
+ * la de un POJO en la cual se definen los atributos con sus
+ * respectivos getters y setters.
+ * <p>
+ * Cada atributo representa un campo de la tabla de la base de datos.
+ * <p>
+ * La clase {@code Client} implementa {@link Serializable} para que sea
+ * transmitida de forma remota.
+ * <p>
+ * Esta nueva entidad define 5 atributos:
+ * <pre>
+ *     folio
+ *     name
+ *     lastName
+ *     motherLastName
+ *     cellphone
+ * </pre>
+ *
+ * @author Alexis Vazquez
+ * @see java.io.Serializable
+ * @since    11
+ */
 @Entity
 @Table(name = "client")
 public class Client implements Serializable {

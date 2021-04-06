@@ -12,6 +12,33 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * Esta clase se encarga de mapear la tabla {@code work} de la
+ * base de datos {@code italikadb}. La estructura de esta clase es
+ * la de un POJO en la cual se definen los atributos con sus
+ * respectivos getters y setters.
+ * <p>
+ * Cada atrbuto representa un campo de la tabla de la base de datos.
+ * La clase {@code Work} implementa {@link Serializable} para que sea
+ * transmitida de forma remota.
+ * <p>
+ * Esta nueva entidad define 9 atributos:
+ * <pre>
+ *     folio
+ *     typeOfWork
+ *     mechanic
+ *     vehicle
+ *     cost
+ *     fechaRecibido
+ *     fechaEntrega
+ *     client
+ *     issues
+ * </pre>
+ *
+ * @author Alexis Vazquez
+ * @see java.io.Serializable
+ * @since   11
+ */
 @Entity
 @Table(name = "work")
 public class Work implements Serializable {
@@ -62,6 +89,8 @@ public class Work implements Serializable {
         this.client = client;
         this.issues = issues;
     }
+
+    public Work() {}
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
