@@ -75,7 +75,7 @@ public class Work implements Serializable {
     @JoinColumn(name = "fk_client", referencedColumnName = "folio", nullable = false)
     private Client client;
 
-    @Column(name = "issues", nullable = false)
+    @Column(name = "issues", length = 225, nullable = false)
     private String issues;
 
     public Work(Integer folio, TypeOfWork typeOfWork, Mechanic mechanic, Vehicle vehicle, Double cost, Date fechaRecibido, Date fechaEntrega, Client client, String issues) {
