@@ -3,16 +3,16 @@ package com.itsx.italikacesit.view;
 import javax.swing.*;
 
 public class LoginLayout extends JFrame{
-    private JTextField loginField;
-    private JButton loginButton;
+    public JTextField loginField;
+    public JButton loginButton;
     private JPanel loginLayout;
     private JPanel navbarLogin;
     private JPanel loginFormPanel;
-    private JPasswordField passwordLoginField;
+    public JPasswordField passwordLoginField;
 
     public LoginLayout() {
         setContentPane(loginLayout);
-        setSize(400,300);
+        setSize(350,500);
         setResizable(false);
     }
 }
