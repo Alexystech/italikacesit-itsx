@@ -9,6 +9,9 @@ public class LoginLayout extends JFrame{
     private JPanel navbarLogin;
     private JPanel loginFormPanel;
     public JPasswordField passwordLoginField;
+    public JLabel formLoginValidation;
+    public JLabel userNameLoginValidation;
+    public JLabel passwordLoginValidation;
 
     public LoginLayout() {
         setContentPane(loginLayout);

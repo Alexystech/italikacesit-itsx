@@ -1,6 +1,5 @@
 package com.itsx.italikacesit.controller;
 
-import com.itsx.italikacesit.model.Client;
 import com.itsx.italikacesit.service.AdministratorService;
 import com.itsx.italikacesit.service.ClientService;
 import com.itsx.italikacesit.service.MechanicService;
@@ -8,12 +7,15 @@ import com.itsx.italikacesit.service.TypeOfWorkService;
 import com.itsx.italikacesit.service.VehicleService;
 import com.itsx.italikacesit.service.WorkService;
 import com.itsx.italikacesit.service.impl.AdministratorServiceImpl;
+import com.itsx.italikacesit.utility.ClientValidations;
 import com.itsx.italikacesit.view.DashboardLayout;
 import com.itsx.italikacesit.view.LoginLayout;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class DashboardController implements ActionListener {
 
@@ -54,6 +56,16 @@ public class DashboardController implements ActionListener {
         dashboardLayout.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    public void runValidations() {
+        dashboardLayout.nameClientField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                ClientValidations clientValidations = new ClientValidations();
+                clientValidations.validateClientName(dashboardLayout.nameClientField, dashboardLayout.nameClientValidation);
+            }
+        });
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if ( e.getSource() == dashboardLayout.logoutLayoutButton ) {
@@ -64,6 +76,8 @@ public class DashboardController implements ActionListener {
             LoginController loginController = new LoginController(loginLayout, administratorService);
 
             loginController.start();
+            loginController.runValidations();
         }
     }
+
 }

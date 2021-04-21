@@ -1,10 +1,7 @@
 import com.itsx.italikacesit.controller.LoginController;
-import com.itsx.italikacesit.model.Administrator;
 import com.itsx.italikacesit.service.AdministratorService;
 import com.itsx.italikacesit.service.impl.AdministratorServiceImpl;
 import com.itsx.italikacesit.view.LoginLayout;
-
-import javax.swing.*;
 
 public class MainClass {
 
@@ -14,5 +11,6 @@ public class MainClass {
 
         LoginController loginController = new LoginController(loginLayout, administratorService);
         loginController.start();
+        loginController.runValidations();
     }
 }

@@ -50,6 +50,11 @@ public class DashboardLayout extends JFrame {
     private JPanel paneDateRecive;
     private JPanel paneDateSend;
     public JTextField plaqueVehicleField;
+    public JLabel nameClientValidation;
+    public JLabel lastNameClientValidation;
+    public JLabel motherLastNameClientValidation;
+    public JLabel cellphoneClientValidation;
+    private JLabel folioClientValidation;
 
     public JDateChooser dateRecive = new JDateChooser();
     public JDateChooser dateSend = new JDateChooser();

@@ -12,12 +12,15 @@ import com.itsx.italikacesit.service.impl.MechanicServiceImpl;
 import com.itsx.italikacesit.service.impl.TypeOfWorkServiceImpl;
 import com.itsx.italikacesit.service.impl.VehicleServiceImpl;
 import com.itsx.italikacesit.service.impl.WorkServiceImpl;
+import com.itsx.italikacesit.utility.LoginValidations;
 import com.itsx.italikacesit.view.DashboardLayout;
 import com.itsx.italikacesit.view.LoginLayout;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,6 +40,25 @@ public class LoginController implements ActionListener {
         loginLayout.setLocationRelativeTo(null);
         loginLayout.setVisible(true);
         loginLayout.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
+
+    public void runValidations() {
+        loginLayout.loginField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                LoginValidations loginValidations = new LoginValidations();
+                loginValidations.validateLoginUserName(loginLayout.loginField,loginLayout.userNameLoginValidation);
+            }
+        });
+
+        loginLayout.passwordLoginField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                LoginValidations loginValidations = new LoginValidations();
+                loginValidations.validateLoginPassword(loginLayout.passwordLoginField
+                        , loginLayout.passwordLoginValidation);
+            }
+        });
     }
 
     @Override
@@ -62,9 +84,11 @@ public class LoginController implements ActionListener {
                 );
 
                 dashboardController.start();
+                dashboardController.runValidations();
             } else {
                 loginLayout.loginField.setText("");
                 loginLayout.passwordLoginField.setText("");
+                loginLayout.formLoginValidation.setText("Usuario o contraseña no coinciden");
             }
         }
 
