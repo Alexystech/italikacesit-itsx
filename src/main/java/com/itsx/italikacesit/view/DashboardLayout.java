@@ -23,7 +23,7 @@ public class DashboardLayout extends JFrame {
     public JTextField lastNameClientField;
     public JTextField motherLastNameClientField;
     public JButton agregarClienteButton;
-    public JTextField celphoneClientField;
+    public JTextField cellphoneClientField;
     public JTextPane issuesTPane;
     public JTextField folioMechanicField;
     public JTextField nameMechanicField;
@@ -35,7 +35,6 @@ public class DashboardLayout extends JFrame {
     public JComboBox clientCBox;
     public JTextField brandVehicleField;
     public JTextField modelVehicleField;
-    public JTextField yearVehicleField;
     public JButton agregarVehiculoButton;
     private JPanel formTypeOfWork;
     public JTextField folioTWorkField;
@@ -47,23 +46,48 @@ public class DashboardLayout extends JFrame {
     public JButton machanicsLayoutButton;
     public JButton clientLayoutButton;
     public JButton serviceManagerLayoutButton;
-    private JPanel paneDateRecive;
+    private JPanel paneDateReceive;
     private JPanel paneDateSend;
     public JTextField plaqueVehicleField;
     public JLabel nameClientValidation;
     public JLabel lastNameClientValidation;
     public JLabel motherLastNameClientValidation;
     public JLabel cellphoneClientValidation;
-    private JLabel folioClientValidation;
+    public JLabel folioClientValidation;
+    public JLabel nameMechanicValidation;
+    public JLabel lastNameMechanicValidation;
+    public JLabel motherLastNameMechanicValidation;
+    public JLabel specialityMechanicValidation;
+    public JLabel cellphoneMechanicValidation;
+    public JLabel plaqueVehicleValidation;
+    public JLabel brandVehicleValidation;
+    public JLabel modelVehicleValidation;
+    public JLabel yearVehicleValidation;
+    public JComboBox yearVehicleCBox;
+    public JLabel folioMechanicValidation;
+    public JTextField folioServiceField;
+    public JLabel folioTWorkValidation;
+    public JLabel nameTWorkValidation;
+    public JLabel typeServiceWorkValidation;
+    public JLabel mechanicWorkValidation;
+    public JLabel vehicleWorkValidation;
+    public JLabel priceWorkValidation;
+    public JLabel dateReceiveWorkValidation;
+    public JLabel dateSendWorkValidation;
+    public JLabel clientWorkValidation;
+    public JLabel issuesWorkValidation;
 
-    public JDateChooser dateRecive = new JDateChooser();
+    public JDateChooser dateReceive = new JDateChooser();
     public JDateChooser dateSend = new JDateChooser();
 
     public DashboardLayout() {
         setContentPane(dashboardLayout);
         setSize(1080,720);
 
-        paneDateRecive.add(dateRecive);
+        dateReceive.setDateFormatString("yyyy/MM/dd HH:mm:ss");
+        dateSend.setDateFormatString("yyyy/MM/dd HH:mm:ss");
+
+        paneDateReceive.add(dateReceive);
         paneDateSend.add(dateSend);
     }
 }

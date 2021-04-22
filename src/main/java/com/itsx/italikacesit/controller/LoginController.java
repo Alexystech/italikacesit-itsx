@@ -12,7 +12,7 @@ import com.itsx.italikacesit.service.impl.MechanicServiceImpl;
 import com.itsx.italikacesit.service.impl.TypeOfWorkServiceImpl;
 import com.itsx.italikacesit.service.impl.VehicleServiceImpl;
 import com.itsx.italikacesit.service.impl.WorkServiceImpl;
-import com.itsx.italikacesit.utility.LoginValidations;
+import com.itsx.italikacesit.validations.impl.LoginValidationsImpl;
 import com.itsx.italikacesit.view.DashboardLayout;
 import com.itsx.italikacesit.view.LoginLayout;
 
@@ -46,16 +46,16 @@ public class LoginController implements ActionListener {
         loginLayout.loginField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                LoginValidations loginValidations = new LoginValidations();
-                loginValidations.validateLoginUserName(loginLayout.loginField,loginLayout.userNameLoginValidation);
+                LoginValidationsImpl loginValidationsImpl = new LoginValidationsImpl();
+                loginValidationsImpl.validateLoginUserName(loginLayout.loginField,loginLayout.userNameLoginValidation);
             }
         });
 
         loginLayout.passwordLoginField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                LoginValidations loginValidations = new LoginValidations();
-                loginValidations.validateLoginPassword(loginLayout.passwordLoginField
+                LoginValidationsImpl loginValidationsImpl = new LoginValidationsImpl();
+                loginValidationsImpl.validateLoginPassword(loginLayout.passwordLoginField
                         , loginLayout.passwordLoginValidation);
             }
         });

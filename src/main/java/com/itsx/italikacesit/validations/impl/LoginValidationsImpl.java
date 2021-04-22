@@ -1,12 +1,15 @@
-package com.itsx.italikacesit.utility;
+package com.itsx.italikacesit.validations.impl;
+
+import com.itsx.italikacesit.validations.LoginValidations;
 
 import javax.swing.*;
 import java.util.Arrays;
 
-public class LoginValidations {
+public class LoginValidationsImpl implements LoginValidations {
 
-    public LoginValidations() {}
+    public LoginValidationsImpl() {}
 
+    @Override
     public void validateLoginUserName(JTextField userNameLoginField, JLabel userNameLoginValidation) {
         if ( userNameLoginField.getText().trim().isEmpty() ) {
             userNameLoginValidation.setText("Dabe llenar este campo");
@@ -15,6 +18,7 @@ public class LoginValidations {
         }
     }
 
+    @Override
     public void validateLoginPassword(JPasswordField passwordLoginField, JLabel passwordLoginValidation) {
         char[] x = new char[0];
         if (Arrays.equals(passwordLoginField.getPassword(), x) ) {
